@@ -26,6 +26,9 @@ public class Solution1 {
 
         int j = 0;
         for (int i = 0; i < original.length; i++) {
+            // You cannot iterate digits array with j
+            // because it will fail for the scenario where nums array has negative values.
+            // It will mess up with the sequence of positions in pos array - they will be reversed.
             if(j<2 && (original[i] == digits[0] || original[i] == digits[1])){
                 pos[j] = i;
                 j++;
@@ -35,4 +38,3 @@ public class Solution1 {
         return pos;
     }
 }
-
