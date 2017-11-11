@@ -5,18 +5,18 @@ public class Solution {
         if (s.equals("") || s.equals(null)){
             return s;
         }
-        String reversedStr = new String();
+        StringBuilder reversedStr = new StringBuilder();
         int startPos =0;
         int endPos = s.indexOf(" ",startPos);
 
         while (startPos < endPos) {
-            reversedStr += reverseString(s.substring(startPos, endPos)) + " ";
+            reversedStr.append(reverseString(s.substring(startPos, endPos))).append(" ");
             startPos = endPos+1;
             endPos = s.indexOf(" ", startPos);
         }
         endPos = s.length();
-        reversedStr += reverseString(s.substring(startPos, endPos));
-        return reversedStr;
+        reversedStr.append(reverseString(s.substring(startPos, endPos))).append(" ");
+        return reversedStr.toString().trim();
     }
 
     public String reverseString(String s) {
