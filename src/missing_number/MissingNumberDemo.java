@@ -33,5 +33,8 @@ public class MissingNumberDemo {
 
         BitManipulationSolution s3 = new BitManipulationSolution();
         System.out.println("Bit Manipulation Solution Output "+s3.missingNumber(testArray));
+
+        GaussSolution s4 = new GaussSolution();
+        System.out.println("Guss Method Solution Output "+s4.missingNumber(testArray));
     }
 }
